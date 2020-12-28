@@ -1,0 +1,23 @@
+{
+  "name": "html-internationalization-boilerplate",
+  "description": "Generating static internationalization html automatically",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Cap32",
+  "homepage": "Cap32/html-internationalization-boilerplate",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "start": "parcel views/**/*.html --out-dir temp --port 3000",
+    "build:en": "cross-env APP_LANG=en parcel build views/**/*.html --out-dir=dist/en",
+    "build:cn": "cross-env APP_LANG=cn parcel build views/**/*.html --out-dir=dist/cn",
+    "prebuild": "rimraf ./temp ./.cache ./dist",
+    "build": "run-p build:*"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "npm-run-all": "^4.1.5",
+    "parcel-bundler": "^1.12.4",
+    "posthtml-expressions": "^1.7.0"
+  }
+}

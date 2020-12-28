@@ -1,0 +1,11 @@
+{
+  "lang": "en",
+  "index": {
+    "title": "Hello",
+    "content": "Hello, world"
+  },
+  "about": {
+    "title": "About",
+    "content": "About me"
+  }
+}
